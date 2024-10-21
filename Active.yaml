@@ -1,0 +1,48 @@
+alwaysRunPostSteps: false
+autosplit: true
+captureScreenRecordingForScenarios: false
+combineTasksInMatrixMode: false
+concurrency: 1
+cypress: false
+errorCategorizedOnFailureOnly: false
+jobID: b3d0a4a7-1a95-4da3-917c-466e00b71964
+jobLabel:
+    - selenium-junit
+    - win
+    - autosplit
+key: ""
+maxRetries: 1
+maxRetriesPreSteps: 0
+postDirectives:
+    commands: []
+    shell: ""
+    workingDirectory: ""
+pre:
+    - mvn clean install
+preDirectives:
+    commands: []
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+project:
+    id: ""
+    name: ""
+    type: ""
+quickRunMode: true
+retryOnFailure: true
+runson: win
+sourcePayload:
+    link: https://github.com/LambdaTest/junit-selenium-hyperexecute-sample.git
+    platform: git
+    ref: main
+testDiscovery:
+    command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
+    mode: dynamic
+    type: raw
+testRunnerCommand: mvn `-Dplatname=win `-Dmaven.repo.local=m2_cache_dir `-Dtest=$test test site surefire-report:report
+testSuiteTimeout: 90
+testSuites: []
+triggerMode: false
+user: ""
+version: "0.1"
+waitForArtefactsUpload: false
